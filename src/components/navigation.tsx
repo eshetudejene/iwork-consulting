@@ -109,37 +109,27 @@ export function Navigation() {
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Menu Header */}
-                  <div className="flex items-center justify-between p-6 border-b border-slate-200 dark:border-slate-700">
-                    <div className="flex items-center">
-                      <>
-                        {/* Light Mode Logo */}
-                        <Image
-                          src="/logo_iwork_light.png"
-                          alt="iWork Consulting Logo"
-                          width={100}
-                          height={40}
-                          priority
-                          className="h-7 w-auto dark:hidden"
-                        />
-                        {/* Dark Mode Logo */}
-                        <Image
-                          src="/logo_iwork_dark.png"
-                          alt="iWork Consulting Logo"
-                          width={100}
-                          height={40}
-                          priority
-                          className="h-7 w-auto hidden dark:block"
-                        />
-                      </>
+                  <div className="flex items-center p-6 border-b border-slate-200 dark:border-slate-700">
+                    <div className="flex items-center w-full">
+                      {/* Light Mode Logo */}
+                      <Image
+                        src="/logo_iwork_light.png"
+                        alt="iWork Consulting Logo"
+                        width={100}
+                        height={40}
+                        priority
+                        className="h-7 w-auto dark:hidden"
+                      />
+                      {/* Dark Mode Logo */}
+                      <Image
+                        src="/logo_iwork_dark.png"
+                        alt="iWork Consulting Logo"
+                        width={100}
+                        height={40}
+                        priority
+                        className="h-7 w-auto hidden dark:block"
+                      />
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="touch-target"
-                    >
-                      <X className="h-5 w-5" />
-                    </Button>
                   </div>
 
                   {/* Mobile Navigation */}

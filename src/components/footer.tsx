@@ -54,14 +54,14 @@ export function Footer() {
 
               {/* Contact info - Centered on mobile */}
               <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-                <div className="flex items-center gap-2 sm:gap-3 text-slate-600 dark:text-slate-300 justify-center lg:justify-start">
+                <div className="flex items-start gap-2 sm:gap-3 text-slate-600 dark:text-slate-300 justify-center lg:justify-start">
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500" />
                   <Link href="mailto:hello@consultiwork.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium touch-target">
                     hello@consultiwork.com
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-2 sm:gap-3 text-slate-600 dark:text-slate-300 justify-center lg:justify-start">
+                <div className="flex items-start gap-2 sm:gap-3 text-slate-600 dark:text-slate-300 justify-center lg:justify-start">
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
                   <Link href="tel:+251913661078" className="hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium touch-target">
                     +251 913 661078
@@ -69,7 +69,7 @@ export function Footer() {
                 </div>
 
                 <div className="flex items-start gap-2 sm:gap-3 text-slate-600 dark:text-slate-300 justify-center lg:justify-start">
-                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500 mt-0.5" />
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500 flex-shrink-0" />
                   <div className="text-center lg:text-left">
                     <div className="font-medium text-xs sm:text-sm">Hager Consult Building, 2nd Floor</div>
                     <div className="text-xs sm:text-sm">Addis Ababa, Ethiopia</div>
@@ -118,7 +118,7 @@ export function Footer() {
 
               <button
                 onClick={scrollToTop}
-                className="p-2 sm:p-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 touch-target"
+                className=" items-center justify-center  flex rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 touch-target"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-3 h-3 sm:w-4 sm:h-4" />
