@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "strategic planning",
     "performance optimization"
   ],
-  authors: [{ name: "iWork Technologies PLC" }],
-  creator: "iWork Technologies PLC",
-  publisher: "iWork Technologies PLC",
+  authors: [{ name: "iWork Consulting PLC" }],
+  creator: "iWork Consulting PLC",
+  publisher: "iWork Consulting PLC",
   formatDetection: {
     email: false,
     address: false,
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
     url: "https://consultiwork.com",
     title: "iWork | Consulting & Technology Solutions",
     description: "Professional business consulting and technology solutions in Ethiopia. We make smart moves and get results quickly.",
-    siteName: "iWork Technologies PLC",
+    siteName: "iWork Consulting PLC",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "iWork Technologies PLC - Consulting & Technology Solutions",
+        alt: "iWork Consulting PLC - Consulting & Technology Solutions",
       },
     ],
   },
@@ -120,7 +120,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "iWork Technologies PLC",
+              "name": "iWork Consulting PLC",
               "alternateName": "ConsultiWork",
               "url": "https://consultiwork.com",
               "logo": "https://consultiwork.com/logo_iwork_light.png",
@@ -154,7 +154,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "iWork Technologies PLC",
+              "name": "iWork Consulting PLC",
               "image": "https://consultiwork.com/office.jpg",
               "description": "Professional business consulting and technology solutions in Ethiopia",
               "address": {
@@ -187,7 +187,7 @@ export default function RootLayout({
               "description": "Professional business consulting and technology solutions including management consulting, website development, and AI solutions.",
               "provider": {
                 "@type": "Organization",
-                "name": "iWork Technologies PLC"
+                "name": "iWork Consulting PLC"
               },
               "areaServed": {
                 "@type": "Country",

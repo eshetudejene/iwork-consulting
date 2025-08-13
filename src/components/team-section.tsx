@@ -101,7 +101,7 @@ export function TeamSection() {
           <p className="text-responsive-lg sm:text-responsive-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Meet the
             <span className="text-gradient-brand font-semibold"> visionary experts</span> driving
-            <span className="text-accent font-semibold"> innovation and excellence</span> at iWork Technologies
+            <span className="text-accent font-semibold"> innovation and excellence</span> at iWork Consulting
           </p>
         </motion.div>
 

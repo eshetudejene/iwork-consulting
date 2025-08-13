@@ -27,7 +27,7 @@ const footerSections = [
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -45,7 +45,7 @@ export function Footer() {
                   ConsultiWork
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3 sm:mb-4 max-w-md mx-auto lg:mx-0">
-                  iWork Technologies PLC - Providing innovative consulting and smart tech solutions with next-level business advising capabilities.
+                  iWork Consulting PLC - Providing innovative consulting and smart tech solutions with next-level business advising capabilities.
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 italic font-medium">
                   &ldquo;We make smart moves and get results quickly.&rdquo;
@@ -105,7 +105,7 @@ export function Footer() {
           {/* Bottom footer - Always centered and balanced */}
           <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-6 text-xs sm:text-sm">
             <div className="text-slate-600 dark:text-slate-300 text-center sm:text-left font-medium">
-              &copy; {currentYear} iWork Technologies PLC. All rights reserved.
+              &copy; {currentYear} iWork Consulting PLC. All rights reserved.
             </div>
 
             <div className="flex items-center gap-4 sm:gap-6">

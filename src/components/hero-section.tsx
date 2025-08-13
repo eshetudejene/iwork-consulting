@@ -31,7 +31,7 @@ export function HeroSection() {
               >
                 <div className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse"></div>
                 <span className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">
-                iWork Technologies PLC
+                iWork Consulting PLC
                 </span>
               </motion.div>
 

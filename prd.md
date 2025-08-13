@@ -5,7 +5,7 @@ Owner: Cascade (AI) + iWork Team
 Date: 2025-08-08
 
 ## 1) Summary
-Build a modern, professional, fast, and accessible marketing website for iWork Technologies PLC (brand: ConsultiWork). The site should clearly communicate the company’s value, services, approach, partners, leadership, and provide an effective contact/CTA path. It must look impressive yet professional, support light/dark mode, and use clean, performance-friendly animations. Stack: Next.js (App Router), Tailwind CSS, shadcn/ui (prefer shadcn components), deployed on Vercel.
+Build a modern, professional, fast, and accessible marketing website for iWork Consulting PLC (brand: ConsultiWork). The site should clearly communicate the company’s value, services, approach, partners, leadership, and provide an effective contact/CTA path. It must look impressive yet professional, support light/dark mode, and use clean, performance-friendly animations. Stack: Next.js (App Router), Tailwind CSS, shadcn/ui (prefer shadcn components), deployed on Vercel.
 
 ## 2) Goals & Objectives
 - Clearly present who iWork/ConsultiWork is and what value it provides.

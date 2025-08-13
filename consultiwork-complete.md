@@ -2,7 +2,7 @@
 
 ## Company Overview
 
-**ConsultiWork** (iWork Technologies PLC) is a comprehensive business consulting and technology solutions company based in Addis Ababa, Ethiopia. The company operates through two main divisions: **iWork Technologies** and **iWork Consulting**.
+**ConsultiWork** (iWork Consulting PLC) is a comprehensive business consulting and technology solutions company based in Addis Ababa, Ethiopia. The company operates through two main divisions: **iWork Consulting** and **iWork Consulting**.
 
 ### Mission Statement
 To provide innovative consulting and smart tech solutions with next-level business advising capabilities.
@@ -28,7 +28,7 @@ The company studies each client's business thoroughly to apply the right strateg
    - Process optimization and efficiency improvement
    - Operational workflow enhancement
 
-2. **Performance Improvement** 
+2. **Performance Improvement**
    - Business performance analysis and enhancement
    - Strategic performance optimization
 
@@ -129,12 +129,12 @@ ConsultiWork has established partnerships with several key organizations to enha
 ## Contact Information
 
 ### Company Details
-- **Legal Name**: iWork Technologies PLC
+- **Legal Name**: iWork Consulting PLC
 - **Business Name**: ConsultiWork
 
 ### Physical Address
 ```
-iWork Technologies PLC
+iWork Consulting PLC
 Hager Consult Building
 2nd Floor
 Addis Ababa, Ethiopia

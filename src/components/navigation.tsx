@@ -115,7 +115,7 @@ export function Navigation() {
                         {/* Light Mode Logo */}
                         <Image
                           src="/logo_iwork_light.png"
-                          alt="iWork Technologies Logo"
+                          alt="iWork Consulting Logo"
                           width={100}
                           height={40}
                           priority
@@ -124,7 +124,7 @@ export function Navigation() {
                         {/* Dark Mode Logo */}
                         <Image
                           src="/logo_iwork_dark.png"
-                          alt="iWork Technologies Logo"
+                          alt="iWork Consulting Logo"
                           width={100}
                           height={40}
                           priority
