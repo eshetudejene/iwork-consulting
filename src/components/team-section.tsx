@@ -8,6 +8,7 @@ import { Linkedin, Mail, Star, Users, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { staggerContainer, staggerItem } from "@/lib/animations"
 import Link from "next/link"
+import LazyAnimation from "./lazy-animation"
 
 const team = [
   {
@@ -47,7 +48,7 @@ export function TeamSection() {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iaGV4IiB3aWR0aD0iODAiIGhlaWdodD0iODAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwb2x5Z29uIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxMDAsIDEwMCwgMTAwLCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIiBwb2ludHM9IjQwLDEwIDcwLDMwIDcwLDUwIDQwLDcwIDEwLDUwIDEwLDMwIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2hleCkiLz48L3N2Zz4=')] opacity-40" />
 
       {/* Floating gradient orbs */}
-      <motion.div
+      <LazyAnimation
         className="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-brand opacity-20 rounded-full blur-3xl"
         animate={{
           x: [0, 60, 0],
@@ -59,9 +60,13 @@ export function TeamSection() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+        threshold={0.05}
+        animationThreshold="medium"
+      >
+        <div className="w-full h-full" />
+      </LazyAnimation>
 
-      <motion.div
+      <LazyAnimation
         className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full blur-3xl bg-slate-400/20 dark:bg-slate-600/20"
         animate={{
           x: [0, -50, 0],
@@ -73,26 +78,33 @@ export function TeamSection() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+        threshold={0.05}
+        animationThreshold="medium"
+      >
+        <div className="w-full h-full" />
+      </LazyAnimation>
 
       <div className="container-responsive relative z-10">
-        <motion.div
+        <LazyAnimation
           className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          threshold={0.1}
+          rootMargin="100px"
         >
-          <motion.div
+          <LazyAnimation
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface mb-6"
             initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+            threshold={0.2}
+            rootMargin="50px"
           >
             <Users className="w-4 h-4 text-slate-600 dark:text-slate-300" />
             <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Leadership Team</span>
-          </motion.div>
+          </LazyAnimation>
 
           <h2 className="text-responsive-3xl sm:text-responsive-4xl lg:text-responsive-5xl xl:text-responsive-6xl font-bold mb-4 sm:mb-6 text-gradient-brand">
             Our Leadership Team
@@ -103,14 +115,16 @@ export function TeamSection() {
             <span className="text-gradient-brand font-semibold"> visionary experts</span> driving
             <span className="text-accent font-semibold"> innovation and excellence</span> at iWork Consulting
           </p>
-        </motion.div>
+        </LazyAnimation>
 
-        <motion.div
+        <LazyAnimation
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16"
           variants={staggerContainer}
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
           viewport={{ once: true }}
+          threshold={0.1}
+          rootMargin="200px"
         >
           {team.map((member, index) => (
             <motion.div key={index} variants={staggerItem}>
@@ -262,15 +276,17 @@ export function TeamSection() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
+        </LazyAnimation>
 
         {/* Call to action */}
-        <motion.div
+        <LazyAnimation
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
+          threshold={0.1}
+          rootMargin="100px"
         >
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6">
             Ready to work with our expert team?
@@ -285,7 +301,7 @@ export function TeamSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </motion.div>
+        </LazyAnimation>
       </div>
     </section>
   )

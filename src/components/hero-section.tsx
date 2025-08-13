@@ -6,23 +6,27 @@ import { motion } from "framer-motion"
 import { staggerContainer, staggerItem, fadeInUp } from "@/lib/animations"
 import { TechnologyIntegrationIllustration } from "./svg-illustrations"
 import Link from "next/link"
+import SmartAnimation from "./smart-animation"
 
 export function HeroSection() {
+  // Component uses LazyAnimation which handles animation enabling internally
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 overflow-hidden px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 overflow-x-hidden w-full px-4 sm:px-6 lg:px-8 hero-section">
       {/* Clean background with subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-purple-500/10" />
 
       {/* Main Content */}
-      <div className="container-responsive relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center min-h-[80vh] lg:min-h-screen">
+      <div className="container-responsive relative z-10 w-full max-w-7xl mx-auto">
+        <div className="w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-20 items-center min-h-[80vh] lg:min-h-screen w-full overflow-x-hidden">
             {/* Left Column - Content */}
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
+            <SmartAnimation
+              preset="medium"
               className="text-center lg:text-left space-y-3 sm:space-y-4 lg:space-y-6 order-2 lg:order-1"
+              threshold={0.15}
+              rootMargin="100px"
+              priority="high"
             >
               {/* Company Badge */}
               <motion.div
@@ -106,23 +110,20 @@ export function HeroSection() {
                   </Link>
                 </Button>
               </motion.div>
-            </motion.div>
+            </SmartAnimation>
 
             {/* Right Column - Illustration */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-center lg:justify-end relative order-1 lg:order-2 mb-8 lg:mb-0"
+            <SmartAnimation
+              preset="light"
+              className="order-1 lg:order-2 flex justify-center items-center"
+              threshold={0.1}
+              rootMargin="200px"
+              animationThreshold="slow" // Even on slow connections, show this animation
             >
-              <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg">
-                {/* Background decoration */}
-                <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl"></div>
-                <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 shadow-2xl border border-slate-200/50 dark:border-slate-600/50">
-                  <TechnologyIntegrationIllustration className="w-full h-auto max-h-[200px] sm:max-h-none" />
-                </div>
+              <div className="relative w-full max-w-lg xl:max-w-xl">
+                <TechnologyIntegrationIllustration className="w-full h-auto" />
               </div>
-            </motion.div>
+            </SmartAnimation>
           </div>
         </div>
       </div>

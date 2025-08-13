@@ -333,4 +333,55 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-400 dark:bg-slate-500;
   }
+
+  /* Mobile overflow fixes */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Ensure all sections contain their content properly on mobile */
+  .hero-section {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Fix for mobile container overflow */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Prevent text from overflowing on small screens */
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    /* Ensure grids don't overflow */
+    .grid {
+      overflow-x: hidden;
+    }
+
+    /* Fix button spacing on mobile */
+    .flex {
+      flex-wrap: wrap;
+    }
+
+    /* Prevent horizontal scroll on mobile */
+    * {
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Ensure touch targets are appropriately sized */
+  .touch-target-lg {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
